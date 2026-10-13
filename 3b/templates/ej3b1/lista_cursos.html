@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Catálogo de cursos</title>
+</head>
+<body>
+    <h1>Catálogo de cursos</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                <a href="{% url 'detalle-curso' curso.slug %}">{{ curso.nombre }}</a>
+                ({{ curso.horas }} horas)
+            </li>
+        {% empty %}
+            <li>No hay cursos disponibles.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

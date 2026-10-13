@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Inscripción</title>
+</head>
+<body>
+    <h1>Formulario de inscripción</h1>
+
+    {% if errores %}
+        <ul class="errores">
+            {% for error in errores %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" action="{% url 'inscripcion' %}">
+        {% csrf_token %}
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" value="{{ nombre|default:'' }}">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" value="{{ email|default:'' }}">
+
+        <button type="submit">Inscribirme</button>
+    </form>
+</body>
+</html>

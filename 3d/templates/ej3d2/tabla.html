@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Inventario</title>
+</head>
+<body>
+    <h1>Inventario</h1>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Stock</th>
+        </tr>
+        {# TODO: Recorre los productos con {% for %} y genera un <tr> por producto con:
+           1. <td class="numero"> con la posición empezando en 1 (forloop.counter)
+           2. <td class="nombre"> con el nombre del producto
+           3. <td class="precio"> con el precio con dos decimales y " €"
+           4. <td class="stock"> con "Sin stock", "Últimas unidades" o "Disponible"
+           Usa {% empty %} para generar <tr class="vacia"><td>No hay productos</td></tr>
+        #}
+    </table>
+
+    {# TODO: Añade <p class="total">Total: N productos</p> usando el filtro length #}
+</body>
+</html>

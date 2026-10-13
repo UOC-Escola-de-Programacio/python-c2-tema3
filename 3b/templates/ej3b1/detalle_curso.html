@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>{{ curso.nombre }}</title>
+</head>
+<body>
+    <h1>{{ curso.nombre }}</h1>
+    <p>Nivel: {{ curso.nivel }}</p>
+    <p>Duración: {{ curso.horas }} horas</p>
+    <a href="{% url 'lista-cursos' %}">Volver al catálogo</a>
+</body>
+</html>
